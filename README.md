@@ -1,6 +1,6 @@
 # 🩺 AI-Enhanced Disease Prediction and Health Recommendation System
 
-A web-based healthcare application that predicts possible diseases based on user-selected symptoms using **Machine Learning** and provides personalized health information including precautions, diet, physical activities, and treatment information.
+A web-based healthcare application that predicts possible diseases based on user-selected symptoms using **Machine Learning** and provides disease-specific health information including precautions, diet, physical activities, and treatment information.
 
 The system integrates **Google Gemini** to transform dataset-grounded health information into clear, structured, and user-friendly guidance.
 
@@ -340,18 +340,28 @@ The endpoint returns:
 
 ### Symptom Selection Interface
 
-<img width="1429" height="737" alt="image" src="https://github.com/user-attachments/assets/652dd3f0-3040-4a66-a332-dee81d34a343" />
-<img width="1423" height="510" alt="image" src="https://github.com/user-attachments/assets/be6db96e-d8c3-4350-9852-83644a1a1e23" />
+<img src="https://github.com/user-attachments/assets/652dd3f0-3040-4a66-a332-dee81d34a343" width="700" alt="Symptom search interface">
 
+<br>
+
+<img src="https://github.com/user-attachments/assets/be6db96e-d8c3-4350-9852-83644a1a1e23" width="700" alt="Selected symptoms interface">
 
 
 ### Prediction Result
 
-<img width="1324" height="571" alt="image" src="https://github.com/user-attachments/assets/d842a6ea-b0ff-4e1c-b01b-65a78c1a985c" />
-<img width="1036" height="788" alt="image" src="https://github.com/user-attachments/assets/dc85db1b-f63d-4c30-9abf-b45465200b2e" />
-<img width="747" height="370" alt="image" src="https://github.com/user-attachments/assets/1fdef9db-aa9a-4cb7-a33f-71848a78aa02" />
-<img width="1083" height="757" alt="image" src="https://github.com/user-attachments/assets/fbfda45d-6e16-4c5d-87e5-464e71eb6e70" />
+<img src="https://github.com/user-attachments/assets/d842a6ea-b0ff-4e1c-b01b-65a78c1a985c" width="700" alt="Disease prediction result">
 
+<br>
+
+<img src="https://github.com/user-attachments/assets/dc85db1b-f63d-4c30-9abf-b45465200b2e" width="700" alt="Health guidance result">
+
+<br>
+
+<img src="https://github.com/user-attachments/assets/1fdef9db-aa9a-4cb7-a33f-71848a78aa02" width="700" alt="Health recommendation details">
+
+<br>
+
+<img src="https://github.com/user-attachments/assets/fbfda45d-6e16-4c5d-87e5-464e71eb6e70" width="700" alt="AI-enhanced health guidance">
 ---
 
 ## ⚠️ Medical Disclaimer
@@ -375,3 +385,10 @@ Medication and treatment decisions should always be made in consultation with a 
 - Evaluate additional Machine Learning and ensemble approaches
 - Improve monitoring and error handling for external AI services
 - Add additional validation for unusual or insufficient symptom combinations
+
+ ---
+
+
+## 👩‍💻 Author
+
+**Mohitha Pallapu**
