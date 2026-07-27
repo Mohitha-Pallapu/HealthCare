@@ -340,15 +340,17 @@ The endpoint returns:
 
 ### Symptom Selection Interface
 
-Add a screenshot showing the symptom search and selection interface.
+<img width="1429" height="737" alt="image" src="https://github.com/user-attachments/assets/652dd3f0-3040-4a66-a332-dee81d34a343" />
+<img width="1423" height="510" alt="image" src="https://github.com/user-attachments/assets/be6db96e-d8c3-4350-9852-83644a1a1e23" />
+
+
 
 ### Prediction Result
 
-Add a screenshot showing:
-
-- Predicted disease
-- Model confidence
-- AI-enhanced health guidance
+<img width="1324" height="571" alt="image" src="https://github.com/user-attachments/assets/d842a6ea-b0ff-4e1c-b01b-65a78c1a985c" />
+<img width="1036" height="788" alt="image" src="https://github.com/user-attachments/assets/dc85db1b-f63d-4c30-9abf-b45465200b2e" />
+<img width="747" height="370" alt="image" src="https://github.com/user-attachments/assets/1fdef9db-aa9a-4cb7-a33f-71848a78aa02" />
+<img width="1083" height="757" alt="image" src="https://github.com/user-attachments/assets/fbfda45d-6e16-4c5d-87e5-464e71eb6e70" />
 
 ---
 
