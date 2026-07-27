@@ -1,7 +1,8 @@
-from flask import Flask, jsonify, request,render_template
+from flask import Flask, jsonify, request, render_template
 
 from src.prediction import predict_disease
 from src.ai_guidance import generate_health_guidance
+from src.prediction import symptom_features
 
 
 app = Flask(__name__)
@@ -11,12 +12,12 @@ def home():
     return render_template("index.html")
 
 @app.route("/api/symptoms", methods=["GET"])
+
 def get_symptoms():
     """
     Return all symptom names expected by the ML model.
     """
 
-    from src.prediction import symptom_features
 
     return jsonify({
         "symptoms": list(symptom_features)
