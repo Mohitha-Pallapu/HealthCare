@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI-Enhanced Disease Prediction & Health Recommendation System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>AI-Enhanced Health Assistant</h1>
+            <p>Disease Prediction & Personalized Health Recommendations</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Symptom Selection -->
+        <section class="card symptom-section">
+
+            <h2>Select Your Symptoms</h2>
+
+            <p class="section-description">
+                Search and select the symptoms you are currently experiencing.
+            </p>
+
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="symptom-search"
+                    placeholder="Search symptoms..."
+                    autocomplete="off"
+                >
+
+                <div
+                    id="symptom-suggestions"
+                    class="suggestions"
+                ></div>
+            </div>
+
+            <div class="selected-section">
+                <h3>Selected Symptoms</h3>
+
+                <div id="selected-symptoms">
+                    <p id="no-symptoms-message">
+                        No symptoms selected.
+                    </p>
+                </div>
+            </div>
+
+            <button id="predict-button" type="button">
+                Predict Disease
+            </button>
+
+            <p id="error-message" class="error-message"></p>
+
+        </section>
+
+
+        <!-- Loading -->
+        <section id="loading-section" class="loading-section" hidden>
+    <div class="spinner"></div>
+    <p>Analyzing symptoms and preparing health guidance...</p>
+</section>
+
+
+        <!-- Prediction Result -->
+        <section id="result-section" class="card result-section" hidden>
+
+            <h2>Prediction Result</h2>
+
+            <div class="prediction-summary">
+
+                <div>
+                    <span class="result-label">
+                        Possible Condition
+                    </span>
+
+                    <h3 id="predicted-disease">—</h3>
+                </div>
+
+                <div>
+                    <span class="result-label">
+                        Model Confidence
+                    </span>
+
+                    <p id="prediction-confidence">—</p>
+                </div>
+
+            </div>
+
+            <div class="guidance-section">
+                <h2>AI-Enhanced Health Guidance</h2>
+
+                <div id="health-guidance"></div>
+            </div>
+
+        </section>
+
+
+        <!-- Medical Disclaimer -->
+        <section class="disclaimer">
+            <strong>Important:</strong>
+            This system provides informational predictions and health
+            guidance only. It is not a substitute for professional medical
+            diagnosis, advice, or treatment.
+        </section>
+
+    </main>
+
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+
+</body>
+</html>

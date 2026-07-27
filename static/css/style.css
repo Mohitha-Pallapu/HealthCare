@@ -1,0 +1,365 @@
+/* ---------- Global ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+
+/* ---------- Header ---------- */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 28px 0;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    color: #176b87;
+    font-size: 30px;
+}
+
+.header p {
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+
+/* ---------- Cards ---------- */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    margin-bottom: 8px;
+}
+
+.section-description {
+    color: #6b7280;
+    margin-bottom: 22px;
+}
+
+
+/* ---------- Symptom Search ---------- */
+
+.search-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#symptom-search {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#symptom-search:focus {
+    border-color: #176b87;
+}
+
+
+/* ---------- Suggestions ---------- */
+
+.suggestions {
+    position: absolute;
+    top: calc(100% + 4px);
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    z-index: 10;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 11px 15px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background: #eef6f8;
+}
+
+
+/* ---------- Selected Symptoms ---------- */
+
+.selected-section {
+    margin-bottom: 22px;
+}
+
+.selected-section h3 {
+    margin-bottom: 10px;
+}
+
+#selected-symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#no-symptoms-message {
+    color: #9ca3af;
+}
+
+.symptom-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #e7f3f6;
+    color: #155e75;
+
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.remove-symptom {
+    border: none;
+    background: none;
+    color: #155e75;
+
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/* ---------- Predict Button ---------- */
+
+#predict-button {
+    border: none;
+    border-radius: 8px;
+
+    background: #176b87;
+    color: #ffffff;
+
+    padding: 12px 24px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#predict-button:hover {
+    background: #12566d;
+}
+
+#predict-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ---------- Errors ---------- */
+
+.error-message {
+    color: #b42318;
+    margin-top: 12px;
+}
+
+
+/* ---------- Loading ---------- */
+
+.loading-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    text-align: center;
+
+    background: #ffffff;
+    color: #176b87;
+
+    padding: 22px;
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+.loading-section[hidden] {
+    display: none;
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+
+    border: 4px solid #dbecef;
+    border-top-color: #176b87;
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ---------- Prediction Result ---------- */
+
+.result-section {
+    border-top: 4px solid #176b87;
+}
+
+.prediction-summary {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+
+    background: #f3f9fa;
+
+    padding: 20px;
+    margin: 20px 0 30px;
+
+    border-radius: 10px;
+}
+
+.result-label {
+    display: block;
+
+    color: #6b7280;
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+#predicted-disease {
+    color: #176b87;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+#prediction-confidence {
+    color: #176b87;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* ---------- AI Guidance ---------- */
+
+.guidance-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 25px;
+}
+
+.guidance-section h2 {
+    color: #176b87;
+    margin-bottom: 18px;
+}
+
+#health-guidance {
+    line-height: 1.8;
+}
+
+#health-guidance h3 {
+    color: #176b87;
+    font-size: 19px;
+
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+
+#health-guidance h3:first-child {
+    margin-top: 8px;
+}
+
+#health-guidance p {
+    margin-bottom: 10px;
+}
+
+#health-guidance li {
+    margin-left: 22px;
+    margin-bottom: 3px;
+    line-height: 1.6;
+}
+
+#health-guidance strong {
+    color: #374151;
+}
+
+#health-guidance em {
+    color: #6b7280;
+}
+
+#health-guidance hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 22px 0;
+}
+
+
+/* ---------- Disclaimer ---------- */
+
+.disclaimer {
+    background: #fff8e6;
+    color: #664d16;
+
+    border-left: 4px solid #d99b23;
+    border-radius: 6px;
+
+    padding: 16px 18px;
+    margin: 25px 0 40px;
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 22px 0;
+        margin-bottom: 25px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .prediction-summary {
+        grid-template-columns: 1fr;
+    }
+
+    #predict-button {
+        width: 100%;
+    }
+}
